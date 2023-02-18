@@ -138,4 +138,4 @@ def main():
     
     
 if __name__ == '__main__':
-    main.run(port=int(os.environ.get("PORT")))
+    main()
