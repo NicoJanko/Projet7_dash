@@ -1,1 +1,1 @@
-web : sh setup.sh && streamlit run dash.py
+web : sh setup.sh && streamlit run dash.py --server.port=$PORT
