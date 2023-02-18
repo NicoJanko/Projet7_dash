@@ -1,3 +1,4 @@
+from cProfile import run
 import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
@@ -6,12 +7,13 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import shap
+import os
 
 st.set_page_config(page_title='Prêt à dépenser', layout = 'wide')
 st.set_option('deprecation.showPyplotGlobalUse', False)
 shap.initjs()
 feat_des = pd.read_csv('feat_des.csv')
-
+port = int(os.environ.get("PORT", 5000)
 #request functions:
 #unitary test
 @st.cache_resource
@@ -136,4 +138,4 @@ def main():
     
     
 if __name__ == '__main__':
-    main()
+    main.run(port=int(os.environ.get("PORT")))
