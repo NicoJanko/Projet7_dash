@@ -1,1 +1,1 @@
-web : streamlit run dash.py 
+web: streamlit run dash.py 
